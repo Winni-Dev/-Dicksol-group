@@ -167,6 +167,7 @@ import ingenieurImage from '../Images/per3.jpeg';
 import responsableImage from '../Images/per4.jpeg';
 import chargeAffairesImage from '../Images/per5.jpeg';
 import assistantImage from '../Images/per6.jpeg';
+import jurist from '../Images/juriste.jpeg'
 
 const GovernanceSection: React.FC = () => {
   const engagements = [
@@ -225,18 +226,18 @@ const GovernanceSection: React.FC = () => {
 
   // Données de l'équipe (6 membres)
   const teamMembers = [
-    // {
-    //   id: 1,
-    //   name: "Dick Anthony",
-    //   position: "Fondateur & DG",
-    //   department: "Direction générale",
-    //   email: "d.anthony@dicksol.groupe",
-    //   // linkedin: "#",
-    //   // twitter: "#",
-    //   image: directeurImage,
-    //   expertise: "Ingénieur Génie Civil, MBA",
-    //   experience: "15+ ans"
-    // },
+    {
+      id: 1,
+      name: "Mr Tra Bi Guy Emmanuel Victorien",
+      position: "Juriste",
+      department: "Juridique",
+      email: "d.anthony@dicksol.groupe",
+      // linkedin: "#",
+      // twitter: "#",
+      image: jurist,
+      expertise: "Ingénieur Génie Civil, MBA",
+      experience: "15+ ans"
+    },
     {
       id: 2,
       name: "Miss Yao Laeticia",

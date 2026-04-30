@@ -71,10 +71,10 @@
 
 //         {/* Engagements */}
 //         <div className="mb-16">
-//           <h3 className="text-2xl font-semibold text-white text-center mb-8">
+//           <h3 className="mb-8 text-2xl font-semibold text-center text-white">
 //             Nos Engagements
 //           </h3>
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 //             {engagements.map((item, index) => {
 //               const Icon = item.icon;
 //               return (
@@ -85,16 +85,16 @@
 //                   viewport={{ once: true }}
 //                   transition={{ duration: 0.6, delay: index * 0.1 }}
 //                 >
-//                   <Card className="text-center h-full">
+//                   <Card className="h-full text-center">
 //                     <div className="flex justify-center mb-4">
-//                       <div className="w-16 h-16 bg-primary-yellow/10 rounded-full flex items-center justify-center">
+//                       <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary-yellow/10">
 //                         <Icon className="w-8 h-8 text-primary-yellow" />
 //                       </div>
 //                     </div>
-//                     <h4 className="text-lg font-semibold text-white mb-2">
+//                     <h4 className="mb-2 text-lg font-semibold text-white">
 //                       {item.title}
 //                     </h4>
-//                     <p className="text-primary-offwhite/70 text-sm">
+//                     <p className="text-sm text-primary-offwhite/70">
 //                       {item.description}
 //                     </p>
 //                   </Card>
@@ -106,10 +106,10 @@
 
 //         {/* Valeurs */}
 //         <div>
-//           <h3 className="text-2xl font-semibold text-white text-center mb-8">
+//           <h3 className="mb-8 text-2xl font-semibold text-center text-white">
 //             Nos Valeurs Fondamentales
 //           </h3>
-//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+//           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
 //             {valeurs.map((item, index) => {
 //               const Icon = item.icon;
 //               return (
@@ -120,16 +120,16 @@
 //                   viewport={{ once: true }}
 //                   transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
 //                 >
-//                   <Card className="text-center h-full border-primary-yellow/20">
+//                   <Card className="h-full text-center border-primary-yellow/20">
 //                     <div className="flex justify-center mb-4">
-//                       <div className="w-16 h-16 bg-primary-yellow/10 rounded-full flex items-center justify-center">
+//                       <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary-yellow/10">
 //                         <Icon className="w-8 h-8 text-primary-yellow" />
 //                       </div>
 //                     </div>
-//                     <h4 className="text-lg font-semibold text-white mb-2">
+//                     <h4 className="mb-2 text-lg font-semibold text-white">
 //                       {item.title}
 //                     </h4>
-//                     <p className="text-primary-offwhite/70 text-sm">
+//                     <p className="text-sm text-primary-offwhite/70">
 //                       {item.description}
 //                     </p>
 //                   </Card>
@@ -168,6 +168,7 @@ import responsableImage from '../Images/per4.jpeg';
 import chargeAffairesImage from '../Images/per5.jpeg';
 import assistantImage from '../Images/per6.jpeg';
 import jurist from '../Images/juriste.jpeg'
+import comptable from '../Images/comptable.jpeg'
 
 const GovernanceSection: React.FC = () => {
   const engagements = [
@@ -297,6 +298,18 @@ const GovernanceSection: React.FC = () => {
       image: assistantImage,
       // expertise: "Gestion & Communication",
       // experience: "5 ans"
+    },
+    {
+      id: 6,
+      name: "Mr N’Guessan Blaise",
+      position: "comptable",
+      department: "comptabilité",
+      email: "a.toure@dicksol.groupe",
+      linkedin: "#",
+      twitter: "#",
+      image: comptable,
+      // expertise: "Gestion & Communication",
+      // experience: "5 ans"
     }
   ];
 
@@ -321,36 +334,36 @@ const GovernanceSection: React.FC = () => {
   };
 
   return (
-    <section id="gouvernance" className="relative py-20 md:py-24 lg:py-28 bg-gradient-to-b from-primary-black to-primary-charcoal overflow-hidden">
+    <section id="gouvernance" className="relative py-20 overflow-hidden md:py-24 lg:py-28 bg-gradient-to-b from-primary-black to-primary-charcoal">
       {/* Éléments de fond élégants */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-40 left-10 w-72 h-72 bg-primary-yellow/5 rounded-full filter blur-3xl" />
-        <div className="absolute bottom-40 right-10 w-96 h-96 bg-primary-yellow/5 rounded-full filter blur-3xl" />
+        <div className="absolute rounded-full top-40 left-10 w-72 h-72 bg-primary-yellow/5 filter blur-3xl" />
+        <div className="absolute rounded-full bottom-40 right-10 w-96 h-96 bg-primary-yellow/5 filter blur-3xl" />
         
         {/* Lignes de structure */}
-        <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-yellow/10 to-transparent" />
-        <div className="absolute top-0 right-1/4 w-px h-full bg-gradient-to-b from-transparent via-primary-yellow/10 to-transparent" />
+        <div className="absolute top-0 w-px h-full left-1/4 bg-gradient-to-b from-transparent via-primary-yellow/10 to-transparent" />
+        <div className="absolute top-0 w-px h-full right-1/4 bg-gradient-to-b from-transparent via-primary-yellow/10 to-transparent" />
       </div>
 
-      <div className="container-custom relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 px-4 mx-auto container-custom max-w-7xl sm:px-6 lg:px-8">
         {/* En-tête de section minimaliste */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 md:mb-16"
+          className="mb-12 text-center md:mb-16"
         >
           <span className="text-primary-yellow/40 text-xs font-light tracking-[0.3em] uppercase">
             Notre identité
           </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mt-3 mb-4">
+          <h2 className="mt-3 mb-4 text-3xl font-light text-white md:text-4xl lg:text-5xl">
             Gouvernance & <span className="text-primary-yellow/80">valeurs</span>
           </h2>
-          <p className="text-primary-offwhite/40 text-sm md:text-base font-light max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-sm font-light text-primary-offwhite/40 md:text-base">
             Des principes forts qui guident nos actions au quotidien
           </p>
-          <div className="w-12 h-px bg-primary-yellow/20 mx-auto mt-6" />
+          <div className="w-12 h-px mx-auto mt-6 bg-primary-yellow/20" />
         </motion.div>
 
         {/* Section Engagements - 2 colonnes sur mobile, 4 sur desktop */}
@@ -359,9 +372,9 @@ const GovernanceSection: React.FC = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mb-8 md:mb-10"
+            className="mb-8 text-center md:mb-10"
           >
-            <span className="inline-flex items-center space-x-2 text-primary-offwhite/30 text-xs font-light uppercase tracking-wider">
+            <span className="inline-flex items-center space-x-2 text-xs font-light tracking-wider uppercase text-primary-offwhite/30">
               <Sparkles className="w-3 h-3" />
               <span>Nos engagements</span>
             </span>
@@ -372,7 +385,7 @@ const GovernanceSection: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6"
+            className="grid grid-cols-2 gap-3 lg:grid-cols-4 md:gap-4 lg:gap-6"
           >
             {engagements.map((item, index) => {
               const Icon = item.icon;
@@ -380,26 +393,26 @@ const GovernanceSection: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="group relative h-full"
+                  className="relative h-full group"
                 >
                   {/* Carte redesignée */}
-                  <div className="relative h-full bg-gradient-to-b from-primary-charcoal/50 to-primary-black/50 backdrop-blur-sm p-4 md:p-6 lg:p-7 rounded-xl md:rounded-2xl border border-primary-yellow/10 hover:border-primary-yellow/30 transition-all duration-500 overflow-hidden">
+                  <div className="relative h-full p-4 overflow-hidden transition-all duration-500 border bg-gradient-to-b from-primary-charcoal/50 to-primary-black/50 backdrop-blur-sm md:p-6 lg:p-7 rounded-xl md:rounded-2xl border-primary-yellow/10 hover:border-primary-yellow/30">
                     
                     {/* Effet de lumière au survol */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 transition-opacity duration-700 opacity-0 bg-gradient-to-br from-primary-yellow/5 to-transparent group-hover:opacity-100" />
                     
                     {/* Contenu */}
                     <div className="relative z-10 text-center">
                       {/* Icône avec design moderne */}
                       <div className="relative inline-block mb-2 md:mb-4">
-                        <div className="absolute inset-0 bg-primary-yellow/20 blur-md rounded-full group-hover:bg-primary-yellow/30 transition-all duration-500" />
-                        <div className="relative w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary-yellow/10 rounded-xl md:rounded-2xl flex items-center justify-center group-hover:bg-primary-yellow/20 transition-all duration-500 transform group-hover:scale-110 group-hover:rotate-3">
-                          <Icon className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary-yellow/80 group-hover:text-primary-yellow transition-colors" />
+                        <div className="absolute inset-0 transition-all duration-500 rounded-full bg-primary-yellow/20 blur-md group-hover:bg-primary-yellow/30" />
+                        <div className="relative flex items-center justify-center w-10 h-10 transition-all duration-500 transform md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary-yellow/10 rounded-xl md:rounded-2xl group-hover:bg-primary-yellow/20 group-hover:scale-110 group-hover:rotate-3">
+                          <Icon className="w-4 h-4 transition-colors md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary-yellow/80 group-hover:text-primary-yellow" />
                         </div>
                       </div>
 
                       {/* Titre */}
-                      <h3 className="text-xs md:text-base lg:text-lg font-light text-white mb-1 md:mb-2 group-hover:text-primary-yellow/90 transition-colors">
+                      <h3 className="mb-1 text-xs font-light text-white transition-colors md:text-base lg:text-lg md:mb-2 group-hover:text-primary-yellow/90">
                         {item.title}
                       </h3>
 
@@ -418,7 +431,7 @@ const GovernanceSection: React.FC = () => {
                       </motion.p>
 
                       {/* Indicateur discret */}
-                      <div className="absolute bottom-1 right-1 md:bottom-2 md:right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="absolute transition-opacity opacity-0 bottom-1 right-1 md:bottom-2 md:right-2 group-hover:opacity-100">
                         <ChevronRight className="w-3 h-3 md:w-4 md:h-4 text-primary-yellow/30" />
                       </div>
                     </div>
@@ -431,7 +444,7 @@ const GovernanceSection: React.FC = () => {
 
         {/* Séparateur élégant */}
         <div className="relative py-6 md:py-10">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-12 md:w-16 h-px bg-gradient-to-r from-transparent via-primary-yellow/30 to-transparent" />
+          <div className="absolute w-12 h-px transform -translate-x-1/2 left-1/2 md:w-16 bg-gradient-to-r from-transparent via-primary-yellow/30 to-transparent" />
         </div>
 
         {/* Section Valeurs - 2 colonnes sur mobile, 4 sur desktop */}
@@ -440,9 +453,9 @@ const GovernanceSection: React.FC = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-center mb-8 md:mb-10"
+            className="mb-8 text-center md:mb-10"
           >
-            <span className="inline-flex items-center space-x-2 text-primary-offwhite/30 text-xs font-light uppercase tracking-wider">
+            <span className="inline-flex items-center space-x-2 text-xs font-light tracking-wider uppercase text-primary-offwhite/30">
               <Sparkles className="w-3 h-3" />
               <span>Nos valeurs fondamentales</span>
             </span>
@@ -453,7 +466,7 @@ const GovernanceSection: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-6"
+            className="grid grid-cols-2 gap-3 lg:grid-cols-4 md:gap-4 lg:gap-6"
           >
             {valeurs.map((item, index) => {
               const Icon = item.icon;
@@ -461,26 +474,26 @@ const GovernanceSection: React.FC = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="group relative h-full"
+                  className="relative h-full group"
                 >
                   {/* Carte redesignée avec style légèrement différent */}
-                  <div className="relative h-full bg-gradient-to-b from-primary-charcoal/30 to-primary-black/30 backdrop-blur-sm p-4 md:p-6 lg:p-7 rounded-xl md:rounded-2xl border border-primary-yellow/5 hover:border-primary-yellow/20 transition-all duration-500 overflow-hidden">
+                  <div className="relative h-full p-4 overflow-hidden transition-all duration-500 border bg-gradient-to-b from-primary-charcoal/30 to-primary-black/30 backdrop-blur-sm md:p-6 lg:p-7 rounded-xl md:rounded-2xl border-primary-yellow/5 hover:border-primary-yellow/20">
                     
                     {/* Effet de lumière au survol */}
-                    <div className="absolute inset-0 bg-gradient-to-tl from-primary-yellow/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                    <div className="absolute inset-0 transition-opacity duration-700 opacity-0 bg-gradient-to-tl from-primary-yellow/5 to-transparent group-hover:opacity-100" />
                     
                     {/* Contenu */}
                     <div className="relative z-10 text-center">
                       {/* Icône avec design moderne - version différente */}
                       <div className="relative inline-block mb-2 md:mb-4">
-                        <div className="absolute inset-0 bg-primary-yellow/10 blur-sm md:blur-md rounded-full group-hover:bg-primary-yellow/20 transition-all duration-500" />
-                        <div className="relative w-10 h-10 md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary-black/50 rounded-lg md:rounded-xl flex items-center justify-center border border-primary-yellow/20 group-hover:border-primary-yellow/40 transition-all duration-500 transform group-hover:scale-105">
-                          <Icon className="w-4 h-4 md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary-yellow/60 group-hover:text-primary-yellow/80 transition-colors" />
+                        <div className="absolute inset-0 transition-all duration-500 rounded-full bg-primary-yellow/10 blur-sm md:blur-md group-hover:bg-primary-yellow/20" />
+                        <div className="relative flex items-center justify-center w-10 h-10 transition-all duration-500 transform border rounded-lg md:w-14 md:h-14 lg:w-16 lg:h-16 bg-primary-black/50 md:rounded-xl border-primary-yellow/20 group-hover:border-primary-yellow/40 group-hover:scale-105">
+                          <Icon className="w-4 h-4 transition-colors md:w-6 md:h-6 lg:w-7 lg:h-7 text-primary-yellow/60 group-hover:text-primary-yellow/80" />
                         </div>
                       </div>
 
                       {/* Titre */}
-                      <h3 className="text-xs md:text-base lg:text-lg font-light text-white/90 mb-1 md:mb-2 group-hover:text-white transition-colors">
+                      <h3 className="mb-1 text-xs font-light transition-colors md:text-base lg:text-lg text-white/90 md:mb-2 group-hover:text-white">
                         {item.title}
                       </h3>
 
@@ -507,7 +520,7 @@ const GovernanceSection: React.FC = () => {
 
         {/* Séparateur élégant avant la section équipe */}
         <div className="relative py-12 md:py-20">
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-16 md:w-24 h-px bg-gradient-to-r from-transparent via-primary-yellow/20 to-transparent" />
+          <div className="absolute w-16 h-px transform -translate-x-1/2 left-1/2 md:w-24 bg-gradient-to-r from-transparent via-primary-yellow/20 to-transparent" />
         </div>
 
         {/* Section Équipe - 1 colonne sur mobile, 2 sur tablette, 3 sur desktop */}
@@ -518,17 +531,17 @@ const GovernanceSection: React.FC = () => {
           className="mb-12"
         >
           {/* En-tête de la section équipe */}
-          <div className="text-center mb-10 md:mb-16">
+          <div className="mb-10 text-center md:mb-16">
             <span className="text-primary-yellow/40 text-xs font-light tracking-[0.3em] uppercase">
               Notre équipe
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light text-white mt-3 mb-4">
+            <h2 className="mt-3 mb-4 text-3xl font-light text-white md:text-4xl lg:text-5xl">
               Des experts à <span className="text-primary-yellow/80">votre service</span>
             </h2>
-            <p className="text-primary-offwhite/40 text-sm md:text-base font-light max-w-2xl mx-auto">
+            <p className="max-w-2xl mx-auto text-sm font-light text-primary-offwhite/40 md:text-base">
               Une équipe pluridisciplinaire passionnée par l'excellence
             </p>
-            <div className="w-12 h-px bg-primary-yellow/20 mx-auto mt-6" />
+            <div className="w-12 h-px mx-auto mt-6 bg-primary-yellow/20" />
           </div>
 
           {/* Grille des 6 membres de l'équipe - 1 colonne sur mobile, 2 sur tablette, 3 sur desktop */}
@@ -537,50 +550,50 @@ const GovernanceSection: React.FC = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8"
+            className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8"
           >
             {teamMembers.map((member) => (
               <motion.div
                 key={member.id}
                 variants={itemVariants}
-                className="group relative"
+                className="relative group"
               >
                 {/* Carte membre */}
-                <div className="relative bg-gradient-to-b from-primary-charcoal/40 to-primary-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl overflow-hidden border border-primary-yellow/5 hover:border-primary-yellow/20 transition-all duration-500">
+                <div className="relative overflow-hidden transition-all duration-500 border bg-gradient-to-b from-primary-charcoal/40 to-primary-black/40 backdrop-blur-sm rounded-xl md:rounded-2xl border-primary-yellow/5 hover:border-primary-yellow/20">
                   
                   {/* Image avec overlay */}
-                  <div className="relative aspect-square overflow-hidden">
+                  <div className="relative overflow-hidden aspect-square">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
                     />
                     
                     {/* Overlay gradient */}
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-black via-primary-black/50 to-transparent opacity-60" />
                     
                     {/* Badge expérience */}
-                    {/* <div className="absolute top-3 right-3 bg-primary-black/60 backdrop-blur-sm px-2 md:px-3 py-1 rounded-full border border-primary-yellow/20">
+                    {/* <div className="absolute px-2 py-1 border rounded-full top-3 right-3 bg-primary-black/60 backdrop-blur-sm md:px-3 border-primary-yellow/20">
                       <span className="text-primary-yellow/60 text-[8px] md:text-[10px] font-light">{member.experience}</span>
                     </div> */}
                     
                     {/* Réseaux sociaux au survol */}
-                    {/* <div className="absolute inset-0 flex items-center justify-center space-x-2 md:space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                      <a href={`mailto:${member.email}`} className="w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-yellow/30 transition-colors">
+                    {/* <div className="absolute inset-0 flex items-center justify-center space-x-2 transition-opacity duration-500 opacity-0 md:space-x-3 group-hover:opacity-100">
+                      <a href={`mailto:${member.email}`} className="flex items-center justify-center transition-colors rounded-full w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm hover:bg-primary-yellow/30">
                         <Mail className="w-3 h-3 md:w-3.5 md:h-3.5 text-primary-yellow/80" />
                       </a>
-                      <a href={member.linkedin} className="w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-yellow/30 transition-colors">
+                      <a href={member.linkedin} className="flex items-center justify-center transition-colors rounded-full w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm hover:bg-primary-yellow/30">
                         <Linkedin className="w-3 h-3 md:w-3.5 md:h-3.5 text-primary-yellow/80" />
                       </a>
-                      <a href={member.twitter} className="w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-primary-yellow/30 transition-colors">
+                      <a href={member.twitter} className="flex items-center justify-center transition-colors rounded-full w-7 h-7 md:w-8 md:h-8 bg-primary-yellow/20 backdrop-blur-sm hover:bg-primary-yellow/30">
                         <Twitter className="w-3 h-3 md:w-3.5 md:h-3.5 text-primary-yellow/80" />
                       </a>
                     </div> */}
                   </div>
 
                   {/* Informations */}
-                  <div className="relative p-4 md:p-5 text-center">
-                    <h3 className="text-base md:text-lg lg:text-xl font-light text-white mb-1 group-hover:text-primary-yellow/80 transition-colors">
+                  <div className="relative p-4 text-center md:p-5">
+                    <h3 className="mb-1 text-base font-light text-white transition-colors md:text-lg lg:text-xl group-hover:text-primary-yellow/80">
                       {member.name}
                     </h3>
                     <p className="text-primary-yellow/60 text-[10px] md:text-xs font-light mb-1">
@@ -594,7 +607,7 @@ const GovernanceSection: React.FC = () => {
                     </p>
                     
                     {/* Ligne décorative */}
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 group-hover:w-8 md:group-hover:w-12 h-px bg-primary-yellow/30 transition-all duration-500" />
+                    <div className="absolute bottom-0 w-0 h-px transition-all duration-500 transform -translate-x-1/2 left-1/2 group-hover:w-8 md:group-hover:w-12 bg-primary-yellow/30" />
                   </div>
                 </div>
               </motion.div>
@@ -619,7 +632,7 @@ const GovernanceSection: React.FC = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="text-center mt-12 md:mt-20"
+          className="mt-12 text-center md:mt-20"
         >
           <div className="inline-flex items-center space-x-2 text-primary-offwhite/10 text-[8px] md:text-[10px] font-light uppercase tracking-wider">
             <span>Des valeurs ancrées dans notre ADN depuis 2025</span>

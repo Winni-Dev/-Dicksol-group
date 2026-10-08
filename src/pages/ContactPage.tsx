@@ -357,9 +357,9 @@ const ContactPage: React.FC = () => {
     {
       icon: Phone,
       title: "Téléphone",
-      line1: "+225 07 08 93 77 63",
+      line1: "+225 05 03 77 01 82",
       line2: "+225  27 21 564 050",
-      link: "tel:+2250708937763",
+      link: "tel:+2250503770182",
     },
     {
       icon: Mail,
